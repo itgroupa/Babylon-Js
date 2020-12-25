@@ -1,0 +1,10 @@
+**/.idea
+**/bin
+**/obj
+**/.vs
+**/node_modules
+**/dist
+**/build
+**/tmp
+**/.git
+**/package-lock.json

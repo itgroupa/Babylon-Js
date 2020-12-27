@@ -1,0 +1,16 @@
+@import  "global";
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  @extend .block_column
+}
+
+#app, nav, div, a, p, span {
+  display: flex;
+}
+
+#app {
+  @extend .block_column
+}

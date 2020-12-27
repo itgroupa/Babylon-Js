@@ -1,0 +1,19 @@
+@import "global";
+@import "colors";
+
+nav {
+  @extend .block_row;
+  a {
+    min-width: 200px;
+    text-decoration: none;
+    color: $nav_color;
+    padding: 5px;
+    border-right: 1px $border_nav_color solid;
+  }
+  a.is-active {
+    background-color: $active_link_background_color;
+  }
+  a:last-child {
+    border-right: none;
+  }
+}

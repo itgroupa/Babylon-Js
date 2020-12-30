@@ -6,16 +6,17 @@ import { GlobalProvider } from './providers';
 import React, { FC, useState } from 'react';
 
 export const App: FC = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoadingInto] = useState(false);
 
   return (
-    <GlobalProvider.Provider value={
-            setLoading
-        }
+    <GlobalProvider.Provider value={{
+      setLoading: setLoadingInto,
+    }}
     >
-      {!loading
-        ? <Root />
-        : <Loading />}
+      <Root />
+      {loading
+        ? <Loading />
+        : null}
     </GlobalProvider.Provider>
   );
 };

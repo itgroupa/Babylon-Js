@@ -17,7 +17,7 @@ const Two = lazy(() => import('../modules/two/two.container'));
 export const Root: FC = () => (
   <Router history={history}>
     <nav>
-      <NavLink to="/one" activeClassName="is-active">One</NavLink>
+      <NavLink to="/one" activeClassName="is-active">Babylon Js</NavLink>
       <NavLink to="/two" activeClassName="is-active">Two</NavLink>
     </nav>
     <div className="content">

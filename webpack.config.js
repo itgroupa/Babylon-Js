@@ -19,7 +19,6 @@ const getPlugins = (build) => {
   if (!fs.existsSync(path.join(buildFolder))) {
     fs.mkdirSync(buildFolder, 0o744);
   }
-  console.log(settings);
   fs.writeFileSync(path.join(buildFolder, settings.SW_VERSION_NAME), `{"version": "${version}"}`, { encoding: 'utf8', flag: 'w' });
 
   const result = [
@@ -37,6 +36,14 @@ const getPlugins = (build) => {
             return JSONMinifyPlugin(content.toString());
           },
           to: buildFolder,
+        },
+      ],
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './public/assets',
+          to: path.join(buildFolder, 'public', 'assets'),
         },
       ],
     }),
